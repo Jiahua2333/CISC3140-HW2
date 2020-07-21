@@ -1,0 +1,11 @@
+
+  echo "# CISC3140-HW2" >> README.md
+  git init
+  git add README.mid
+  git commit -m "first commit"
+  git remote add origin https://github.com/Jiahua2333/CISC3140-HW2.git
+  git remote -v
+  git push -u origin master
+  git add .
+  git commit -am "update task1 log"
+  git push
