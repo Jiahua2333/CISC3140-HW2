@@ -1,0 +1,15 @@
+# Server setup
+sudo mkdir /opt/svn
+sudo svnadmin create /opt/svn/test
+cd opt/svn/test/conf
+sudo vim svnserve.conf
+sudo vim passwd
+sudo vim authz
+sudo svnserve -d -r /opt/svn/ --listen-port 3692
+
+# User
+# clone the test repo
+sudo svn checkout svn://your ip address: 3692/test
+# Create a log file in test repo
+vim task.log
+svn commit -m "first commit" task.log
