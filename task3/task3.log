@@ -1,0 +1,5 @@
+wget http://files.grouplens.org/datasets/movielens/ml-lastest-small.zip
+unzip ml-lastest-small.zip
+cd ml-lastest-small.zip
+awk -F"," '{for(i=2; i<NF; i++) printf $i" "; print ""}' movies.csv > tmp.txt
+awk -F" " 'NR>1 {print $NF, $0}' tmp.txt | sort | cut -f2- -d' ' > test.txt
